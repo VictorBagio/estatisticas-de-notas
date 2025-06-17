@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
+//fun√ß√£o para calcular m√©dia
 float calcularmedia(float notas[], int quantidade) {
     float soma = 0;
     for (int i = 0; i < quantidade; i++) {
@@ -10,6 +11,7 @@ float calcularmedia(float notas[], int quantidade) {
     return soma / quantidade;
 }
 
+//fun√ß√£o para encontrar a maior nota
 float encontrarmaior(float notas[], int quantidade) {
     float maior = notas[0];
     for (int i = 1; i < quantidade; i++) {
@@ -20,7 +22,7 @@ float encontrarmaior(float notas[], int quantidade) {
     return maior;
 }
 
-// FunÁ„o principal
+// Fun√ß√£o principal
 int main(){
     setlocale(LC_ALL, "Portuguese");
 
@@ -30,8 +32,8 @@ int main(){
         scanf("%f", &notas[i]);
     }
     
-    //chamar funÁıes
-    printf("A maior nota È: %.2f\n", encontrarmaior(notas, 10));
-    printf("A mÈdia das notas È: %.2f\n", calcularmedia(notas, 10));
+    //chamar fun√ß√µes
+    printf("A maior nota √©: %.2f\n", encontrarmaior(notas, 10));
+    printf("A m√©dia das notas √©: %.2f\n", calcularmedia(notas, 10));
     return 0;
 }
